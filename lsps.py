@@ -1,17 +1,13 @@
 # -*- coding: utf8 -*-
 """
- * 日志流处理服务：
+ * Log Stream Process Service：
  *  log_message(name, message)
  *
  *  process_local_log_stream(name, callback)
  *
  *  process_remote_log_stream(name, callback, host, pwd=None, user="root", port=22)
  *
- *  WARNING: 虽然每台服务器上打印的日志是严格按顺序的保存和处理的，但是多台服务器之间的日志顺序是无法保证先后顺序的严格一致的
  *
- * Create by Truan Wang on 2021/08/26
- *
- * Copyright ? 2014-2030 . 上海进馨网络科技有限公司 . All Rights Reserved
 """
 import os
 import sys
@@ -205,11 +201,6 @@ if __name__ == "__main__":
             sys.stdout.write(line)
 
     if args.debug:
-        #while True:
-        #    for arg in args.names:
-        #        process_remote_log_stream(arg, print_to_stdout, "47.97.63.113", lsps_path='/opt/justing/jct/lsps.py')
-        #    time.sleep(3)
-
         i = 0
         while True:
             for arg in args.names:
